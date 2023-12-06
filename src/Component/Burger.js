@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import BurgerItem from "./BurgerItem";
+import { useNavigate } from 'react-router-dom'
 import "./Burger.css";
 
 export default function Burger() {
+  const navigate = useNavigate();
   const initialState = {
     lettuce: { price: 0.5, quantity: 0 },
     bacon: { price: 0.4, quantity: 0 },
@@ -42,6 +44,7 @@ export default function Burger() {
   const resetState = function () {
     setBurger(initialState);
     setPrice(3);
+    navigate("/signup");
   };
 
   return (

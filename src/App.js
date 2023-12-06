@@ -1,10 +1,18 @@
+import {Route, Routes} from 'react-router-dom';
 import './App.css';
 import Burger from './Component/Burger'
+import Error from './Component/Error'
+import SignUp from './Component/SignUp'
+
 
 function App() {
   return (
     <div className="App">
-      < Burger />
+      <Routes>
+        <Route exact path='/' element={<Burger/>} />
+        <Route path='/signup' Component={SignUp} />
+        <Route path="*" element={<Error/>} />
+      </Routes>
     </div>
   );
 }

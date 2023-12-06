@@ -45,6 +45,39 @@
   position: relative;
 }
 
+.email-field,
+.password-field,
+.link-btn {
+  margin-bottom: 10px; /* You can adjust the margin to control the spacing between elements */
+}
+
+.container1{
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
+  height: 60%;
+  width: 20%;
+  border: 2px solid lightblue;
+}
+.link-btn{
+  text-decoration: none;
+}
+
+.link-btn1{
+  color: #702e05;
+
+}
+
+.link-btn2{
+  color: green;
+
+}
+
+
+/* .email-field, .password-field, .link-btn {
+  margin: 20px;
+} */
+
 .meat {
   width: 80%;
   height: 25px;
