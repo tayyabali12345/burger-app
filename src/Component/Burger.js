@@ -3,7 +3,8 @@ import BurgerItem from "./BurgerItem";
 import { useNavigate } from 'react-router-dom'
 import "./Burger.css";
 
-export default function Burger() {
+export default function Burger(props) {
+  console.warn("burger", props)
   const navigate = useNavigate();
   const initialState = {
     lettuce: { price: 0.5, quantity: 0 },
@@ -57,6 +58,14 @@ export default function Burger() {
         <BurgerItem items={burger} />
       )}
 
+          <button
+                    onClick={
+                        ()=>{props.addToCartHandler(10)}
+                        }>
+                        Add To Cart</button>
+
+
+
       <div className="bread-bottom"></div>
 
       <div className="ingredients">
@@ -76,6 +85,7 @@ export default function Burger() {
             </div>
           ))}
           <button onClick={() => resetState()}>Sign up for order</button>
+
         </div>
       </div>
     </div>
