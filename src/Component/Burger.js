@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 import BurgerItem from "./BurgerItem";
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
+import {
+  Button1,
+  TomatoButton,
+  GradButton,
+  Animatedlogo,
+} from "./buttons/button";
 import "./Burger.css";
+import logo from "../logo.svg";
 
 export default function Burger() {
   const navigate = useNavigate();
@@ -50,6 +57,13 @@ export default function Burger() {
   return (
     <div className="center">
       <div className="bread-top"></div>
+      <Animatedlogo src={logo} />
+
+      <Button1 type="submit" onClick={() => console.log("aaaaaaaaaaa")}>
+        Hello click me
+      </Button1>
+      <TomatoButton>Hello click me</TomatoButton>
+      <GradButton>Hello click me</GradButton>
 
       {burger === initialState ? (
         <p className="para">No ingredients present</p>

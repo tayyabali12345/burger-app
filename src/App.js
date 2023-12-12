@@ -3,6 +3,7 @@ import './App.css';
 import Burger from './Component/Burger'
 import Error from './Component/Error'
 import SignUp from './Component/SignUp'
+import Button from './Component/buttons/button';
 
 
 function App() {
